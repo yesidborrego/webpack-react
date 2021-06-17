@@ -1,0 +1,67 @@
+1. Instalar webpack:
+    npm webpack webpack-cli -D
+
+2. correr el comando:
+    npx webpack -> si no se le indica el 'mode' por default es 'production'
+  crea la carpeta 'dist' y los archivos de JS para production.
+
+3. npx webpack --mode development -> modo desarrollo
+
+- Crear un script en el package.json:
+    "build": "webpack --mode production"
+
+*** librerías y plugin para el manejo de los archivos .js
+- instalar babel:
+     npm install babel-loader @babel/core @babel/preset-env @babel-plugin-transform-runtime -D
+     @babel-plugin-transform-runtime: manejo de asíncronismo (Promise, async/await)
+
+*** plugin para el manejo de los archivos .html
+- instalar:
+    npm install html-webpack-plugin -D
+
+*** plugin para el manejo de los archivos .css
+    npm i mini-css-extract-plugin css-loader -D
+
+*** librería para el manejo de preprocesadores de .css:
+    - 'Stylus'
+        npm i stylus stylus-loader -D
+
+*** librería para el manejo del preprocesador de .css:
+    - 'sass'
+        npm i sass sass-loader -D
+
+*** plugin para copiar archivos:
+    npm i copy-webpack-plugin -D
+
+*** plugin para utilizar y copiar fonts:
+    npm i file-loader url-loader -D
+
+*** plugin para minificar archivos:
+    npm i css-minimizer-webpack-plugin terser-webpack-plugin -D
+
+*** plugin para el manjeo de variables de entorno '.env':
+    npm i dotenv-webpack -D
+
+*** plugin para mantener la estructura de los archivos compilados solo con los archivos necesarios:
+    npm i clean-webpack-plugin -D -> no necesario, se reemplaza por el flag 'clean: true' en 'output'
+
+- Para crear el watch de los archivos se puede hacer de 2 maneras:
+    1. colocar el flag:
+        'watch: true'
+        en el archivo webpack.config.dev.js o en el archivo que se desea aplicar el watch.
+    2. colocar en el package.json:
+        "[commandName]": "webpack --watch --config [fileName]"
+        "dev-watch": "webpack --watch --config webpack.config.dev.js"
+
+- Crear un servidor de desarrollo local:
+    npm i webpack-dev-server -D
+
+- Optimizar y minimizar los archivos del proyecto:
+    npm i webpack-bundle-analyzer -D
+
+
+
+
+
+
+

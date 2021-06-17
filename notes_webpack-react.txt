@@ -1,0 +1,14 @@
+*** Configurar Webpack para utilizar con React ***
+- Instalar babel para react:
+npm install babel-loader @babel/core @babel/preset-env @babel/preset-react babel-loader -D
+
+- Instalar webpack:
+    npm install webpack webpack-cli webpack-dev-server -D
+- Plugin y loder para trabajar con el HTML
+  npm install html-loader html-webpack-plugin -D
+
+- Plugin y loder para trabajar con los archivos CSS y SASS:
+  npm install mini-css-extract-plugin css-loader style-loader sass sass-loader -D
+
+- Optimizar archivos del proyecto
+  npm install css-minimizer-webpack-plugin terser-webpack-plugin clean-webpack-plugin -D
